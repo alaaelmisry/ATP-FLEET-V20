@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ATP Fleet Management</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HOME PAGE
+===================================================== -->
+
+<div
+    id="homePage"
+    class="page"
+>
+
+
+    <div class="container">
+
+
+        <!-- LOGO -->
+
+        <div class="logo-container">
+
+            <img
+                src="logo.png"
+                class="logo"
+                alt="ATP Logo"
+            >
+
+        </div>
+
+
+        <!-- COMPANY NAME -->
+
+        <h1>
+            Al-Rashed Technology & Energy Company
+        </h1>
+
+
+        <h2>
+            ATP FLEET MANAGEMENT
+        </h2>
+
+
+        <!-- DATE AND TIME -->
+
+        <div class="datetime-container">
+
+            <div id="todayName"></div>
+
+            <div id="todayDate"></div>
+
+            <div id="todayTime"></div>
+
+        </div>
+
+
+        <!-- MAIN BUTTONS -->
+
+        <button
+            type="button"
+            onclick="showRegisterPage()"
+        >
+            Register Vehicle Status
+        </button>
+
+
+        <button
+            type="button"
+            onclick="checkPassword()"
+        >
+            View Vehicle Status
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     REGISTER PAGE
+===================================================== -->
+
+<div
+    id="registerPage"
+    class="page"
+    style="display:none;"
+>
+
+
+    <div class="container">
+
+
+        <h2>
+            Register Vehicle Status
+        </h2>
+
+
+        <!-- VEHICLE TYPE -->
+
+        <div class="input-card">
+
+
+            <div class="card-title">
+                Vehicle Type
+            </div>
+
+
+            <div class="card-input">
+
+                <select id="vehicleType">
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option value="PRIVATE">
+                        Private Vehicles
+                    </option>
+
+                    <option value="TRUCKS">
+                        Trucks & Tractors
+                    </option>
+
+                    <option value="EQUIPMENT">
+                        Heavy & Light Equipment
+                    </option>
+
+                    <option value="SPECIAL">
+                        Special Vehicles
+                    </option>
+
+                    <option value="GENERATORS">
+                        Generators & Pumps
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- VEHICLE NUMBER -->
+
+        <div class="input-card">
+
+
+            <div class="card-title">
+                Vehicle Number
+            </div>
+
+
+            <div class="card-input">
+
+                <select id="vehicleNumber">
+
+                    <option value="">
+                        Select
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DRIVER -->
+
+        <div class="input-card">
+
+
+            <div class="card-title">
+                Authorized Driver
+            </div>
+
+
+            <div class="card-input">
+
+                <div
+                    id="driverName"
+                    class="driver-box"
+                >
+                    ---
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DRIVER STATUS -->
+
+        <div class="input-card">
+
+
+            <div class="card-title">
+                Driver Status
+            </div>
+
+
+            <div class="card-input">
+
+                <select id="driverStatus">
+
+                    <option value="present">
+                        Present
+                    </option>
+
+                    <option value="absent">
+                        Absent
+                    </option>
+
+                    <option value="sick">
+                        Sick Leave
+                    </option>
+
+                    <option value="annual">
+                        Annual Leave
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- VEHICLE STATUS -->
+
+        <div class="input-card">
+
+
+            <div class="card-title">
+                Vehicle Status
+            </div>
+
+
+            <div class="card-input">
+
+                <select id="vehicleStatus">
+
+                    <option value="working">
+                        Working
+                    </option>
+
+                    <option value="defective">
+                        Defective
+                    </option>
+
+                    <option value="stopped">
+                        Stopped
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MAINTENANCE -->
+
+        <div class="input-card">
+
+
+            <div class="card-title">
+                Maintenance Status
+            </div>
+
+
+            <div class="card-input">
+
+                <select id="maintenanceStatus">
+
+                    <option value="none">
+                        No Maintenance
+                    </option>
+
+                    <option value="periodic">
+                        Periodic Maintenance
+                    </option>
+
+                    <option value="emergency">
+                        Emergency Maintenance
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- NOTES -->
+
+        <div class="input-card notes-card">
+
+
+            <div class="card-title">
+                Notes
+            </div>
+
+
+            <div class="card-input">
+
+                <textarea
+                    id="vehicleNotes"
+                    placeholder="Enter notes if any"
+                ></textarea>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BUTTONS -->
+
+        <button
+            type="button"
+            onclick="saveAndSendReport()"
+        >
+            Save & Send
+        </button>
+
+
+        <button
+            type="button"
+            class="secondary-button"
+            onclick="goHome()"
+        >
+            Back to Home
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     VIEW PAGE
+===================================================== -->
+
+<div
+    id="viewPage"
+    class="page"
+    style="display:none;"
+>
+
+
+    <div class="container">
+
+
+        <h2>
+            Vehicle Status
+        </h2>
+
+
+
+        <!-- =================================================
+             PRIVATE VEHICLES
+        ================================================== -->
+
+        <div
+            class="section-card"
+            onclick="toggleSection('privateSection')"
+        >
+
+            <span class="section-title">
+                Private Vehicles
+            </span>
+
+            <span class="section-stat">
+                Total:
+                <strong id="privateTotal">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat working-stat">
+                Working:
+                <strong id="privateWorking">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat defective-stat">
+                Defective:
+                <strong id="privateDefective">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat stopped-stat">
+                Stopped:
+                <strong id="privateStopped">
+                    0
+                </strong>
+            </span>
+
+        </div>
+
+
+        <div
+            id="privateSection"
+            class="vehicles-container"
+            style="display:none;"
+        ></div>
+
+
+
+        <!-- =================================================
+             TRUCKS
+        ================================================== -->
+
+        <div
+            class="section-card"
+            onclick="toggleSection('trucksSection')"
+        >
+
+            <span class="section-title">
+                Trucks & Tractors
+            </span>
+
+            <span class="section-stat">
+                Total:
+                <strong id="trucksTotal">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat working-stat">
+                Working:
+                <strong id="trucksWorking">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat defective-stat">
+                Defective:
+                <strong id="trucksDefective">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat stopped-stat">
+                Stopped:
+                <strong id="trucksStopped">
+                    0
+                </strong>
+            </span>
+
+        </div>
+
+
+        <div
+            id="trucksSection"
+            class="vehicles-container"
+            style="display:none;"
+        ></div>
+
+
+
+        <!-- =================================================
+             EQUIPMENT
+        ================================================== -->
+
+        <div
+            class="section-card"
+            onclick="toggleSection('equipmentSection')"
+        >
+
+            <span class="section-title">
+                Heavy & Light Equipment
+            </span>
+
+            <span class="section-stat">
+                Total:
+                <strong id="equipmentTotal">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat working-stat">
+                Working:
+                <strong id="equipmentWorking">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat defective-stat">
+                Defective:
+                <strong id="equipmentDefective">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat stopped-stat">
+                Stopped:
+                <strong id="equipmentStopped">
+                    0
+                </strong>
+            </span>
+
+        </div>
+
+
+        <div
+            id="equipmentSection"
+            class="vehicles-container"
+            style="display:none;"
+        ></div>
+
+
+
+        <!-- =================================================
+             SPECIAL VEHICLES
+        ================================================== -->
+
+        <div
+            class="section-card"
+            onclick="toggleSection('specialSection')"
+        >
+
+            <span class="section-title">
+                Special Vehicles
+            </span>
+
+            <span class="section-stat">
+                Total:
+                <strong id="specialTotal">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat working-stat">
+                Working:
+                <strong id="specialWorking">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat defective-stat">
+                Defective:
+                <strong id="specialDefective">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat stopped-stat">
+                Stopped:
+                <strong id="specialStopped">
+                    0
+                </strong>
+            </span>
+
+        </div>
+
+
+        <div
+            id="specialSection"
+            class="vehicles-container"
+            style="display:none;"
+        ></div>
+
+
+
+        <!-- =================================================
+             GENERATORS
+        ================================================== -->
+
+        <div
+            class="section-card"
+            onclick="toggleSection('generatorSection')"
+        >
+
+            <span class="section-title">
+                Generators & Pumps
+            </span>
+
+            <span class="section-stat">
+                Total:
+                <strong id="generatorTotal">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat working-stat">
+                Working:
+                <strong id="generatorWorking">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat defective-stat">
+                Defective:
+                <strong id="generatorDefective">
+                    0
+                </strong>
+            </span>
+
+            <span class="section-stat stopped-stat">
+                Stopped:
+                <strong id="generatorStopped">
+                    0
+                </strong>
+            </span>
+
+        </div>
+
+
+        <div
+            id="generatorSection"
+            class="vehicles-container"
+            style="display:none;"
+        ></div>
+
+
+
+        <!-- BACK -->
+
+        <button
+            type="button"
+            class="secondary-button"
+            onclick="goHome()"
+        >
+            Back to Home
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     NOTE MODAL
+===================================================== -->
+
+<div
+    id="noteModal"
+    class="modal"
+    style="display:none;"
+>
+
+
+    <div class="modal-content">
+
+
+        <button
+            type="button"
+            class="modal-close"
+            onclick="closeNoteModal()"
+        >
+            ×
+        </button>
+
+
+        <h3>
+            Vehicle Notes
+        </h3>
+
+
+        <div
+            id="noteModalVehicle"
+            class="modal-vehicle"
+        ></div>
+
+
+        <div
+            id="noteModalText"
+            class="modal-note"
+        ></div>
+
+
+        <div
+            id="noteModalUpdate"
+            class="modal-update"
+        ></div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADMIN MODAL
+===================================================== -->
+
+<div
+    id="adminModal"
+    class="modal"
+    style="display:none;"
+>
+
+
+    <div class="modal-content">
+
+
+        <button
+            type="button"
+            class="modal-close"
+            onclick="closeAdminModal()"
+        >
+            ×
+        </button>
+
+
+        <h3>
+            Administrator Access
+        </h3>
+
+
+        <input
+            type="password"
+            id="adminPasswordInput"
+            placeholder="Enter administrator password"
+        >
+
+
+        <button
+            type="button"
+            onclick="submitAdminPassword()"
+        >
+            Login
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT FILES
+===================================================== -->
+
+<script src="data.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
