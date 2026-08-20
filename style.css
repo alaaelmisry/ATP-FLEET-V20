@@ -1,0 +1,1374 @@
+/* =========================================================
+   ATP FLEET MANAGEMENT
+   STYLE.CSS
+   VERSION 6.0
+   ========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    width: 100%;
+    min-height: 100%;
+
+}
+
+
+body {
+
+    width: 100%;
+    min-height: 100vh;
+
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+
+    direction: rtl;
+
+    background:
+        #f4f6f9;
+
+    color:
+        #222;
+
+    overflow-x:
+        hidden;
+
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding:
+        20px 12px;
+
+}
+
+
+.container {
+
+    width: 100%;
+
+    max-width:
+        900px;
+
+    margin:
+        0 auto;
+
+    text-align:
+        center;
+
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-container {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom:
+        12px;
+
+}
+
+
+.logo {
+
+    width:
+        130px;
+
+    height:
+        130px;
+
+    object-fit:
+        contain;
+
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1 {
+
+    font-size:
+        28px;
+
+    line-height:
+        1.4;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+h2 {
+
+    font-size:
+        22px;
+
+    line-height:
+        1.4;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+h3 {
+
+    font-size:
+        17px;
+
+    line-height:
+        1.4;
+
+    margin-bottom:
+        7px;
+
+}
+
+
+#todayName,
+#todayDate,
+#todayTime {
+
+    color:
+        #0d47a1;
+
+    font-weight:
+        bold;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+
+    width:
+        100%;
+
+    min-height:
+        52px;
+
+    border:
+        none;
+
+    border-radius:
+        12px;
+
+    background:
+        #1565c0;
+
+    color:
+        #fff;
+
+    font-family:
+        inherit;
+
+    font-size:
+        17px;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+
+    margin-top:
+        9px;
+
+    padding:
+        8px 12px;
+
+    transition:
+        .2s ease;
+
+}
+
+
+button:hover {
+
+    opacity:
+        .92;
+
+}
+
+
+button:active {
+
+    transform:
+        scale(.99);
+
+}
+
+
+/* =========================================================
+   INPUT CARDS
+   ========================================================= */
+
+.input-card {
+
+    width:
+        100%;
+
+    min-height:
+        70px;
+
+    background:
+        #fff;
+
+    border-radius:
+        13px;
+
+    padding:
+        11px 13px;
+
+    margin-bottom:
+        11px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.09);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        10px;
+
+}
+
+
+.card-title {
+
+    width:
+        34%;
+
+    font-size:
+        15px;
+
+    font-weight:
+        bold;
+
+    text-align:
+        right;
+
+    flex-shrink:
+        0;
+
+}
+
+
+.card-input {
+
+    width:
+        66%;
+
+    text-align:
+        left;
+
+}
+
+
+/* =========================================================
+   INPUT FIELDS
+   ========================================================= */
+
+select,
+input[type="text"],
+input[type="password"],
+textarea {
+
+    width:
+        100%;
+
+    height:
+        43px;
+
+    border:
+        1px solid #ccc;
+
+    border-radius:
+        9px;
+
+    padding:
+        7px 9px;
+
+    font-family:
+        inherit;
+
+    font-size:
+        15px;
+
+    background:
+        #fff;
+
+    color:
+        #222;
+
+    outline:
+        none;
+
+}
+
+
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+
+    border-color:
+        #1565c0;
+
+    box-shadow:
+        0 0 0 2px rgba(21,101,192,.10);
+
+}
+
+
+textarea {
+
+    min-height:
+        43px;
+
+    height:
+        43px;
+
+    resize:
+        vertical;
+
+}
+
+
+/* =========================================================
+   DRIVER BOX
+   ========================================================= */
+
+.driver-box {
+
+    width:
+        100%;
+
+    height:
+        43px;
+
+    border:
+        1px solid #ccc;
+
+    border-radius:
+        9px;
+
+    background:
+        #fff;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        5px;
+
+    font-size:
+        15px;
+
+    font-weight:
+        bold;
+
+    overflow:
+        hidden;
+
+    white-space:
+        nowrap;
+
+    text-overflow:
+        ellipsis;
+
+}
+
+
+/* =========================================================
+   SECTION CARD
+   ========================================================= */
+
+.section-card {
+
+    width:
+        100%;
+
+    min-height:
+        58px;
+
+    background:
+        #0d47a1;
+
+    color:
+        #fff;
+
+    border-radius:
+        13px;
+
+    padding:
+        13px 8px;
+
+    margin-bottom:
+        7px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.10);
+
+    font-size:
+        15px;
+
+    font-weight:
+        bold;
+
+    cursor:
+        pointer;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    flex-wrap:
+        wrap;
+
+    line-height:
+        1.5;
+
+}
+
+
+/* =========================================================
+   SECTION STATISTICS
+   ========================================================= */
+
+.section-card span {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-width:
+        25px;
+
+    height:
+        24px;
+
+    padding:
+        0 5px;
+
+    border-radius:
+        6px;
+
+    background:
+        rgba(255,255,255,.18);
+
+    font-size:
+        13px;
+
+}
+
+
+/* =========================================================
+   VEHICLE CONTAINER
+   ========================================================= */
+
+.vehicles-container {
+
+    width:
+        100%;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+/* =========================================================
+   VEHICLE CARD
+   ========================================================= */
+
+.vehicle-card {
+
+    width:
+        100%;
+
+    min-height:
+        36px;
+
+    background:
+        #fff;
+
+    border-radius:
+        9px;
+
+    padding:
+        3px 5px;
+
+    margin-bottom:
+        3px;
+
+    box-shadow:
+        0 1px 4px rgba(0,0,0,.09);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        2px;
+
+    overflow:
+        hidden;
+
+}
+
+
+/* =========================================================
+   VEHICLE COLUMNS
+   ========================================================= */
+
+.vehicle-status {
+
+    width:
+        13%;
+
+    text-align:
+        center;
+
+    font-size:
+        11px;
+
+    font-weight:
+        bold;
+
+    flex-shrink:
+        0;
+
+}
+
+
+.vehicle-number {
+
+    width:
+        14%;
+
+    text-align:
+        center;
+
+    font-size:
+        12px;
+
+    font-weight:
+        bold;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+    flex-shrink:
+        0;
+
+}
+
+
+.vehicle-driver {
+
+    width:
+        20%;
+
+    text-align:
+        center;
+
+    font-size:
+        11px;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+    flex-shrink:
+        0;
+
+}
+
+
+.vehicle-driver-status {
+
+    width:
+        16%;
+
+    text-align:
+        center;
+
+    font-size:
+        10px;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+    flex-shrink:
+        0;
+
+}
+
+
+.vehicle-maintenance {
+
+    width:
+        18%;
+
+    text-align:
+        center;
+
+    font-size:
+        10px;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+    flex-shrink:
+        0;
+
+}
+
+
+/* =========================================================
+   NOTE COLUMN
+   ========================================================= */
+
+.vehicle-note {
+
+    width:
+        7%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-shrink:
+        0;
+
+}
+
+
+.note-button {
+
+    width:
+        28px;
+
+    min-width:
+        28px;
+
+    height:
+        28px;
+
+    min-height:
+        28px;
+
+    padding:
+        0;
+
+    margin:
+        0;
+
+    border:
+        none;
+
+    border-radius:
+        6px;
+
+    background:
+        transparent;
+
+    color:
+        inherit;
+
+    font-size:
+        17px;
+
+    line-height:
+        28px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    cursor:
+        pointer;
+
+}
+
+
+.note-button:hover {
+
+    background:
+        #f0f2f5;
+
+    opacity:
+        1;
+
+}
+
+
+.note-button:active {
+
+    transform:
+        scale(.92);
+
+}
+
+
+/* =========================================================
+   UPDATE TIME
+   ========================================================= */
+
+.vehicle-update {
+
+    width:
+        12%;
+
+    text-align:
+        center;
+
+    font-size:
+        9px;
+
+    color:
+        #555;
+
+    white-space:
+        nowrap;
+
+    flex-shrink:
+        0;
+
+}
+
+
+/* =========================================================
+   VEHICLE STATUS COLORS
+   ========================================================= */
+
+.status-working {
+
+    color:
+        #2e7d32;
+
+    font-weight:
+        bold;
+
+}
+
+
+.status-fault {
+
+    color:
+        #ef6c00;
+
+    font-weight:
+        bold;
+
+}
+
+
+.status-stopped {
+
+    color:
+        #d32f2f;
+
+    font-weight:
+        bold;
+
+}
+
+
+/* =========================================================
+   DRIVER STATUS COLORS
+   ========================================================= */
+
+.driver-present {
+
+    color:
+        #2e7d32;
+
+}
+
+
+.driver-absent {
+
+    color:
+        #d32f2f;
+
+}
+
+
+.driver-sick {
+
+    color:
+        #ef6c00;
+
+}
+
+
+.driver-annual {
+
+    color:
+        #1565c0;
+
+}
+
+
+/* =========================================================
+   MAINTENANCE COLORS
+   ========================================================= */
+
+.maintenance-none {
+
+    color:
+        #2e7d32;
+
+}
+
+
+.maintenance-periodic {
+
+    color:
+        #ef6c00;
+
+    font-weight:
+        bold;
+
+}
+
+
+.maintenance-emergency {
+
+    color:
+        #d32f2f;
+
+    font-weight:
+        bold;
+
+}
+
+
+/* =========================================================
+   EMPTY VEHICLE MESSAGE
+   ========================================================= */
+
+.vehicles-container:empty::after {
+
+    content:
+        "No vehicles available";
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    padding:
+        10px;
+
+    background:
+        #fff;
+
+    border-radius:
+        9px;
+
+    color:
+        #777;
+
+    font-size:
+        12px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .page {
+
+        padding:
+            12px 7px;
+
+    }
+
+
+    .container {
+
+        max-width:
+            100%;
+
+    }
+
+
+    .logo {
+
+        width:
+            105px;
+
+        height:
+            105px;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            21px;
+
+    }
+
+
+    h2 {
+
+        font-size:
+            18px;
+
+        margin-bottom:
+            13px;
+
+    }
+
+
+    h3 {
+
+        font-size:
+            14px;
+
+        margin-bottom:
+            5px;
+
+    }
+
+
+    button {
+
+        min-height:
+            49px;
+
+        font-size:
+            15px;
+
+        border-radius:
+            11px;
+
+    }
+
+
+    .input-card {
+
+        min-height:
+            63px;
+
+        padding:
+            9px;
+
+        gap:
+            6px;
+
+        margin-bottom:
+            8px;
+
+    }
+
+
+    .card-title {
+
+        width:
+            33%;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .card-input {
+
+        width:
+            67%;
+
+    }
+
+
+    select,
+    input[type="text"],
+    input[type="password"],
+    textarea {
+
+        height:
+            39px;
+
+        font-size:
+            12px;
+
+        padding:
+            5px 7px;
+
+    }
+
+
+    .driver-box {
+
+        height:
+            39px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .section-card {
+
+        min-height:
+            54px;
+
+        padding:
+            8px 5px;
+
+        gap:
+            4px;
+
+        font-size:
+            11px;
+
+        line-height:
+            1.4;
+
+    }
+
+
+    .section-card span {
+
+        min-width:
+            21px;
+
+        height:
+            21px;
+
+        font-size:
+            10px;
+
+    }
+
+
+    .vehicle-card {
+
+        min-height:
+            34px;
+
+        padding:
+            2px 3px;
+
+        gap:
+            1px;
+
+        border-radius:
+            7px;
+
+    }
+
+
+    .vehicle-status {
+
+        width:
+            14%;
+
+        font-size:
+            9px;
+
+    }
+
+
+    .vehicle-number {
+
+        width:
+            14%;
+
+        font-size:
+            10px;
+
+    }
+
+
+    .vehicle-driver {
+
+        width:
+            20%;
+
+        font-size:
+            9px;
+
+    }
+
+
+    .vehicle-driver-status {
+
+        width:
+            16%;
+
+        font-size:
+            8px;
+
+    }
+
+
+    .vehicle-maintenance {
+
+        width:
+            18%;
+
+        font-size:
+            8px;
+
+    }
+
+
+    .vehicle-note {
+
+        width:
+            7%;
+
+    }
+
+
+    .note-button {
+
+        width:
+            24px;
+
+        min-width:
+            24px;
+
+        height:
+            24px;
+
+        min-height:
+            24px;
+
+        font-size:
+            14px;
+
+        line-height:
+            24px;
+
+    }
+
+
+    .vehicle-update {
+
+        width:
+            11%;
+
+        font-size:
+            8px;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .page {
+
+        padding:
+            9px 4px;
+
+    }
+
+
+    .section-card {
+
+        font-size:
+            10px;
+
+    }
+
+
+    .section-card span {
+
+        min-width:
+            19px;
+
+        height:
+            19px;
+
+        font-size:
+            9px;
+
+    }
+
+
+    .vehicle-status {
+
+        font-size:
+            8px;
+
+    }
+
+
+    .vehicle-number {
+
+        font-size:
+            9px;
+
+    }
+
+
+    .vehicle-driver {
+
+        font-size:
+            8px;
+
+    }
+
+
+    .vehicle-driver-status {
+
+        font-size:
+            7px;
+
+    }
+
+
+    .vehicle-maintenance {
+
+        font-size:
+            7px;
+
+    }
+
+
+    .note-button {
+
+        font-size:
+            12px;
+
+    }
+
+
+    .vehicle-update {
+
+        font-size:
+            7px;
+
+    }
+
+}
+
+
+/* =========================================================
+   END OF STYLE.CSS
+   ========================================================= */
